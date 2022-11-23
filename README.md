@@ -1,11 +1,11 @@
-React+TypeScript 공부용 개인 프로젝트
+# React+TypeScript 공부용 개인 프로젝트
 
 
-🐶기간 : 2022. 11. 23 ~ 
+🐶 기간 : 2022. 11. 23 ~ 
 
-🐶목적 : React 와 TypeScript 친해지기!
+🐶 목적 : React 와 TypeScript 친해지기!
 
-🐶인원 : 김대호
+🐶 구현기능: 미정
 
 🐶 적용기술 : <img src="https://img.shields.io/badge/React-aqua?style=flat&logo=react&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/HTML-orange?style=flat&logo=HTML5&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/CSS-blue?style=flat&logo=CSS3&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/TypeScript-gray?style=flat&logo=TypeScript&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/BootStrap-purple?style=flat&logo=BootStrap&logoColor=white&magin-left=5px"/>
 
