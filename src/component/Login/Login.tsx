@@ -10,12 +10,20 @@ function Login() {
     }
     const loginSumbit = () => {
         let testLoginInfo :LoginType = {userId : "eogh773", userPw : "eogh12"}
-        console.log("유저인풋: ",userInput)
-        console.log("로그인 데이터: ", testLoginInfo)
         if(userInput.userId === testLoginInfo.userId && userInput.userPw === testLoginInfo.userPw){
-            console.log("로그인 성공")
+            alert("로그인 성공!")
         }else{
-            console.log("로그인 실패")
+            alert("아이디 또는 패스워드를 확인해주세요")
+        }
+    }
+
+    const saveUserInfo = (e :React.FormEvent<HTMLInputElement>) => {
+        let isCheck:boolean = e.currentTarget.checked
+        console.log(isCheck)
+        if(isCheck){
+            localStorage.setItem('userData', JSON.stringify(userInput));
+        }else{
+            localStorage.removeItem('userData');
         }
     }
     
@@ -40,7 +48,7 @@ function Login() {
                                                 <label >Password</label>
                                             </div>
                                             <div className="form-check mb-3">
-                                                <input className="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
+                                                <input className="form-check-input" id="inputRememberPassword" type="checkbox" onClick={saveUserInfo}/>
                                                 <label className="form-check-label" >Remember Password</label>
                                             </div>
                                             <div className="d-flex align-items-center justify-content-between mt-4 mb-0">
