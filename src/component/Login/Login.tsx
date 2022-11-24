@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 import './Login.css'
 
 function Login() {
     type LoginType = {userId: string | undefined, userPw: string | undefined}
     const [userInput, setUserInput] = useState({userId : "", userPw: ""})
+    const navigate = useNavigate();
 
     const inputLoginData = (e :React.FormEvent<HTMLInputElement>) => {
         setUserInput({...userInput, [e.currentTarget.name]: e.currentTarget.value})
