@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router';
 import './Login.css'
 
 function Login() {
     type LoginType = {userId: string | undefined, userPw: string | undefined}
     const [userInput, setUserInput] = useState({userId : "", userPw: ""})
+    const navigate = useNavigate();
 
     const inputLoginData = (e :React.FormEvent<HTMLInputElement>) => {
         setUserInput({...userInput, [e.currentTarget.name]: e.currentTarget.value})
@@ -12,6 +14,7 @@ function Login() {
         let testLoginInfo :LoginType = {userId : "eogh773", userPw : "eogh12"}
         if(userInput.userId === testLoginInfo.userId && userInput.userPw === testLoginInfo.userPw){
             alert("로그인 성공!")
+            navigate("/join")
         }else{
             alert("아이디 또는 패스워드를 확인해주세요")
         }
@@ -26,6 +29,9 @@ function Login() {
             localStorage.removeItem('userData');
         }
     }
+
+    
+
     
   return (
     <div className="App">
