@@ -1,0 +1,116 @@
+.box-wrap-day {
+  height: 100vh;
+  background: rgb(255, 255, 255);
+}
+
+.box-wrap-night {
+  background: #000;
+  height: 100vh;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background: rgb(164, 164, 240);
+}
+
+.nav-item-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.nav-menu-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  padding-left: 100px;
+}
+
+.Day-shift {
+  font-size: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.night-shift {
+  color: white;
+  font-size: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.dropdown {
+  margin-left: 20px;
+}
+
+.btn-primary {
+  width: 120px;
+}
+
+.dropdown-menu li {
+  width: 120px;
+}
+
+.body-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-logo {
+  margin-top: 40px;
+  width: 500px;
+}
+
+.search-box {
+  width: 400px;
+}
+
+.search-box input {
+  width: 90%;
+  height: 30px;
+}
+
+.search-box button {
+  height: 30.5px;
+  border: 1px solid black;
+}
+
+.userInfo-wrap {
+  margin-top: 30px;
+}
+
+.nickName-box {
+  display: flex;
+}
+
+.nickName-box p {
+  font-size: 20px;
+}
+.nickName-box strong {
+  font-size: 20px;
+}
+
+.level-box {
+  display: flex;
+}
+
+.level-box p {
+  font-size: 20px;
+}
+.level-box strong {
+  font-size: 20px;
+}
+
+.null-box {
+  margin-top: 30px;
+  font-size: 25px;
+}
