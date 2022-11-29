@@ -32,7 +32,7 @@
    ![5](https://user-images.githubusercontent.com/98578138/204481292-06e36563-82a2-4861-9790-a9ad60642dac.png)
 
 
-   - 위의 결과를 뽑을 때 하나의 api에서 호출하는 방식이 호출한 api의 결과값을 통해 xml을 반환하는 또다른 api를 연계하여 아이콘과 유저정보를 뽑아낸다. 자세한 내용은 공식문서를 참조.
+   - 위의 결과를 뽑을 때 하나의 api에서 호출하는 방식이 아닌, 호출한 api의 결과값을 통해 xml을 반환하는 또다른 api를 연계하여 아이콘과 유저정보를 뽑아낸다. 자세한 내용은 공식문서를 참조.
    1. DEVELOPER-APIS [https://developer.riotgames.com/] 
    2. DEVELOPER-DOCS [https://developer.riotgames.com/docs/portal]
 
