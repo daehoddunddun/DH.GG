@@ -16,6 +16,7 @@
    - eslint prettier 적용
    - CRA를 통한 React 설치
    - React-Router 및 TypeSrcipt 적용
+   - [주간모드/야간모드] 기능추가(11/25)
 
    ![reactintroduction](https://user-images.githubusercontent.com/98578138/203504109-96c10c69-3126-46a8-998f-345b3751ae43.png)
    ![image](https://user-images.githubusercontent.com/98578138/203504124-65805979-0dd0-40a5-8a58-1757801bbdb6.png)
