@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./Main.css";
-import History from "./History";
 import { BsFillSunFill } from "react-icons/bs";
+import DropMenu from "./DropMenu";
+import History from "./History";
+import "./Main.css";
 
 function Main() {
   const [nickName, setNickName] = useState<string>("");
@@ -68,33 +69,14 @@ function Main() {
   return (
     <div className={shift.body}>
       <div className="nav-wrap">
-        <h1 className="nav-item-title">Restful Api 연동</h1>
+        <img className="nav-item-title" src="./logo_2.png" alt="로고"/>
         <div className="nav-menu-wrap">
           <BsFillSunFill className={shift.btn} onClick={isMode} />
-          <div className="dropdown">
-            <button
-              className="btn btn-primary dropdown-toggle"
-              type="button"
-              data-toggle="dropdown"
-            >
-              Menu
-            </button>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#!">DropMenu1</a>
-              </li>
-              <li>
-                <a href="#!">DropMenu2</a>
-              </li>
-              <li>
-                <a href="#!">DropMenu3</a>
-              </li>
-            </ul>
-          </div>
+          <DropMenu/>
         </div>
       </div>
       <div className="body-wrap">
-        <img src="react.png" className="body-logo" alt="로고" />
+        <img src="logo_3.png" className="body-logo" alt="로고" />
         <div className="search-box">
           <input
             type="text"
