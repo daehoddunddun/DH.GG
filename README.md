@@ -21,7 +21,7 @@
    ![image](https://user-images.githubusercontent.com/98578138/203504124-65805979-0dd0-40a5-8a58-1757801bbdb6.png)
 
 
-2. Riot Games open api를 활용한 전적검색 구현 (11/28)
+2. Riot Games open api를 활용한 전적검색 구현 (11/28 ~ )
    - Riot Games 공식 api 중 소환사 전적검색 api 활용
    - 실제 내 아이디와 faker 선수 아이디를 검색했을 때 나오는 결과값 표출
    - 레이아웃은 추후 변경 예정
