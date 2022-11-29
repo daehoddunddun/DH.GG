@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Main.css";
+import History from "./History";
 import { BsFillSunFill } from "react-icons/bs";
 
 function Main() {
-  type objType = {
-    body: string;
-    btn: string;
-  };
-
   const [nickName, setNickName] = useState<string>("");
   const [userInfo, setUserInfo] = useState<any>({});
-  const [shift, setShift] = useState<objType>({
+  const [userIcon, setUserIcon] = useState<string>("");
+  const [shift, setShift] = useState<any>({
     body: "box-wrap-day",
     btn: "Day-shift",
   });
@@ -35,7 +32,7 @@ function Main() {
 
   const onSearch = () => {
     fetch(
-      `https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${nickName}?api_key=RGAPI-28c83a06-aa7b-45f8-84ba-5e6b4fbe6729`,
+      `https://kr.api.riotgames.com/tft/summoner/v1/summoners/by-name/${nickName}?api_key=RGAPI-7f369172-3948-4754-a98e-21cf6e1e7c25`,
       {
         method: "GET",
         headers: {
@@ -48,19 +45,25 @@ function Main() {
         },
       }
     )
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error("에러 발생!");
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+      .then((response) => response.json())
       .then((result) => {
         setUserInfo(result);
+        fetch(
+          `http://ddragon.leagueoflegends.com/cdn/12.22.1/img/profileicon/${result.profileIconId}.png`,
+          {
+            method: "GET",
+            headers: {
+              Accept: "*/*",
+            },
+          }
+        ).then((result) => {
+          console.log(result);
+          setUserIcon(result.url);
+        });
       });
   };
+
+  console.log(userInfo);
 
   return (
     <div className={shift.body}>
@@ -100,17 +103,23 @@ function Main() {
           />
           <button onClick={onSearch}>확인</button>
         </div>
-        {userInfo ? (
-          <div className="userInfo-wrap">
-            <div className="nickName-box">
-              <strong>{userInfo.name}</strong>
+        {userIcon ? (
+          <>
+            <div className="user-wrap">
+              <img className="user-Icon" src={userIcon} alt="아이콘" />
+              <div className="user-info-wrap">
+                <div className="nickName-box">
+                  <strong>{userInfo.name}</strong>
+                </div>
+                <div className="level-box">
+                  <p>LV : {userInfo.summonerLevel}</p>
+                </div>
+              </div>
             </div>
-            <div className="level-box">
-              <p>{userInfo.summonerLevel}</p>
-            </div>
-          </div>
+            <History></History>
+          </>
         ) : (
-          <p className="null-box">유저 정보가 없습니다</p>
+          <p></p>
         )}
       </div>
     </div>

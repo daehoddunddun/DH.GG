@@ -84,17 +84,35 @@
   border: 1px solid black;
 }
 
-.userInfo-wrap {
+.user-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 150px;
+  margin-left: 20px;
   margin-top: 30px;
+}
+
+.user-Icon {
+  position: absolute;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.user-info-wrap {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 180px;
 }
 
 .nickName-box {
   display: flex;
 }
 
-.nickName-box p {
-  font-size: 20px;
-}
 .nickName-box strong {
   font-size: 20px;
 }
@@ -104,10 +122,7 @@
 }
 
 .level-box p {
-  font-size: 20px;
-}
-.level-box strong {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .null-box {
