@@ -1,13 +1,28 @@
-.box-wrap-day {
+/* shift */
+.Day-shift-btn {
+  margin-right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.night-shift-btn {
+  margin-right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.body-wrap-day {
   height: 100vh;
   background: rgb(255, 255, 255);
 }
 
-.box-wrap-night {
-  background: rgb(126, 125, 125);
+.body-wrap-night {
   height: 100vh;
+  background: rgba(176, 176, 176, 0.786);
 }
 
+/* nav */
 .nav-wrap {
   display: flex;
   justify-content: space-between;
@@ -17,12 +32,12 @@
   background: rgb(165, 165, 182);
 }
 
-.nav-item-title {
+.nav-title {
   margin-left: 20px;
   cursor: pointer;
 }
 
-.nav-menu-wrap {
+.nav-menu-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,76 +45,72 @@
   padding-left: 100px;
 }
 
-.Day-shift {
-  font-size: 25px;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.night-shift {
-  color: white;
-  font-size: 25px;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
+/* nav-bootstrap */
 .dropdown {
   margin-left: 20px;
 }
 
-.btn-primary {
-  width: 120px;
-}
-
+.btn-primary,
 .dropdown-menu li {
-  width: 120px;
+  width: 150px;
 }
 
-.dropdown-toggle, .dropdown-toggle:hover, .dropdown-toggle:focus {
-  background: rgb(0, 0, 0);
-  color: rgb(216, 216, 216);
+.dropdown-toggle,
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  box-shadow: none;
   border: 1px solid black;
-  box-shadow:rgb(0, 0, 0)
+  color: rgb(216, 216, 216);
+  background: rgb(0, 0, 0);
 }
 
-.body-wrap {
-  width: 100%;
+/* contents */
+.contents-wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-.body-logo {
+.contents-logo {
   margin-top: 40px;
   width: 220px;
 }
 
-.search-box {
+.contents-search-box {
+  display: flex;
   width: 400px;
 }
 
-.search-box input {
+.contents-search-box input {
   width: 90%;
   height: 30px;
+  margin-right: 0.1px;
+  border: 1px solid rgba(0, 0, 0, 0.505);
 }
 
-.search-box button {
-  height: 30.5px;
-  border: 1px solid black;
+.contents-search-box button {
+  width: 50px;
+  height: 30.2px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.505);
+  color: rgb(0, 0, 0);
+  background: rgb(165, 165, 182);
 }
 
-.user-wrap {
-  position: relative;
+/* contents-user */
+.user-info-box {
   display: flex;
   align-items: center;
+  position: relative;
   width: 400px;
   height: 150px;
   margin-left: 20px;
   margin-top: 30px;
 }
 
-.user-Icon {
+.user-icon {
   position: absolute;
   left: 50px;
   width: 100px;
@@ -107,30 +118,17 @@
   border-radius: 5px;
 }
 
-.user-info-wrap {
-  position: absolute;
+.user-info-list {
   display: flex;
   flex-direction: column;
+  position: absolute;
   left: 180px;
 }
 
-.nickName-box {
-  display: flex;
-}
-
-.nickName-box strong {
+.user-nickname {
   font-size: 20px;
 }
 
-.level-box {
-  display: flex;
-}
-
-.level-box p {
+.user-level {
   font-size: 18px;
-}
-
-.null-box {
-  margin-top: 30px;
-  font-size: 25px;
 }
