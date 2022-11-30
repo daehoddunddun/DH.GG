@@ -17,7 +17,7 @@
    - CRA를 통한 React 설치 (11/23)
    - React-Router 및 TypeSrcipt 적용 (11/23)
    - 주간모드/야간모드 기능추가 (11/25)
-   - type 모듈 지정 호출 (11/29)
+   - type 모듈 지정 호출 (11/30)
 
    ![reactintroduction](https://user-images.githubusercontent.com/98578138/203504109-96c10c69-3126-46a8-998f-345b3751ae43.png)
    ![image](https://user-images.githubusercontent.com/98578138/203504124-65805979-0dd0-40a5-8a58-1757801bbdb6.png)
@@ -27,9 +27,9 @@
 
    ![22](https://user-images.githubusercontent.com/98578138/204750582-e067ca77-4e3a-487f-a232-b9b3e98c0c4a.png)
 
-   - Riot Games 공식 api 중 소환사 전적검색 api 활용 (11/28) 
-   - 실제 내 아이디와 faker 선수 아이디를 검색했을 때 나오는 결과값 표출 (11/28) 
-   - favicon 추가 및 스타일 리팩토링 작업 진행 (11/29)
+   - Riot Games 공식 api 사용 key 발급 신청 (11/28) 
+   - 실제 내 아이디와 faker 선수 아이디를 검색했을 때 나오는 결과값 표출 (11/29) 
+   - favicon 추가 및 스타일 리팩토링 작업 진행 (11/30)
     - 추가 레이아웃 작업은 나중에 진행 예정 
   
 
@@ -43,7 +43,7 @@
    2. DEVELOPER-DOCS [https://developer.riotgames.com/docs/portal]
 
 
-3. POSTMAN 을 통한 API 리스트 준비 및 정렬 (11/28 ~ )
+3. POSTMAN 을 통한 API 리스트 준비 및 정렬 (11/29 ~ )
 
    ![3](https://user-images.githubusercontent.com/98578138/204481997-a73529c1-70c8-47a8-b683-fe61c61ce360.png)
    
