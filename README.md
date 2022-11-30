@@ -28,7 +28,6 @@
    ![22](https://user-images.githubusercontent.com/98578138/204750582-e067ca77-4e3a-487f-a232-b9b3e98c0c4a.png)
 
    - Riot Games 공식 api 사용 key 발급 신청 (11/28) 
-   - 실제 내 아이디와 faker 선수 아이디를 검색했을 때 나오는 결과값 표출 (11/29) 
    - favicon 추가 및 스타일 리팩토링 작업 진행 (11/30)
     - 추가 레이아웃 작업은 나중에 진행 예정 
   
@@ -36,6 +35,8 @@
    ![2](https://user-images.githubusercontent.com/98578138/204480433-cf1267ff-ed14-48f4-9cc9-547b69268cc3.png)
    
    ![5](https://user-images.githubusercontent.com/98578138/204481292-06e36563-82a2-4861-9790-a9ad60642dac.png)
+   
+      - 실제 내 아이디와 faker 선수 아이디를 검색했을 때 나오는 결과값 표출 (11/29) 
 
 
    - 위의 결과를 뽑을 때 하나의 api에서 호출하는 방식이 아닌, 호출한 api의 결과값을 통해 xml을 반환하는 또다른 api를 연계하여 아이콘과 유저정보를 뽑아낸다. 자세한 내용은 공식문서를 참조.
