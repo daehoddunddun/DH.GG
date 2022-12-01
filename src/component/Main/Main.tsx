@@ -15,6 +15,7 @@ function Main() {
   const [userIcon, setUserIcon] = React.useState<string>("");
   const [userTier, setUserTier] = React.useState<any>([]);
   const [gameList, setGameList] = React.useState<any>([]);
+  const [champImg, setChampImg] = React.useState<any>([]);
   const [shift, setShift] = React.useState<typeShift>({
     body: "body-wrap-day",
     btn: "Day-shift-btn",
@@ -38,6 +39,20 @@ function Main() {
     setNickName(event.currentTarget.value);
     console.log(nickName);
   };
+
+  // useEffect(() => {
+  //   result.info.participants.forEach((item: any) => {
+  //     fetch(
+  //       `https://ddragon.leagueoflegends.com/cdn/12.22.1/img/champion/${item.championName}.png`,
+  //       {
+  //         method: "GET",
+  //         headers: {
+  //           Accept: "*/*",
+  //         },
+  //       }
+  //     ).then((response) => setChampImg(response));
+  //   });
+  // }, [gameList]);
 
   const onSearch = () => {
     gameList.length > 9 && setGameList("");
