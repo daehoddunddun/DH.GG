@@ -31,13 +31,17 @@
    - favicon 추가 및 스타일 리팩토링 작업 진행 (11/30)
     - 추가 레이아웃 작업은 나중에 진행 예정 
   
-
    ![2](https://user-images.githubusercontent.com/98578138/204480433-cf1267ff-ed14-48f4-9cc9-547b69268cc3.png)
    
-   ![5](https://user-images.githubusercontent.com/98578138/204481292-06e36563-82a2-4861-9790-a9ad60642dac.png)
-   
       - 실제 내 아이디와 faker 선수 아이디를 검색했을 때 나오는 결과값 표출 (11/29) 
+      
+  ![23213](https://user-images.githubusercontent.com/98578138/205009183-b37b4a8f-c953-452d-ace0-820b53cbbb73.png)
 
+      - 최근 10게임 전적 데이터 호출(12/01)
+      - 게임 리스트 id값을 참조하여 게임별 전적 및 참여 유저리스트 표출, 나머지는 추후 작업 예정(12/01)
+
+   
+   ![5](https://user-images.githubusercontent.com/98578138/204481292-06e36563-82a2-4861-9790-a9ad60642dac.png)
 
    - 위의 결과를 뽑을 때 하나의 api에서 호출하는 방식이 아닌, 호출한 api의 결과값을 통해 xml을 반환하는 또다른 api를 연계하여 아이콘과 유저정보를 뽑아낸다. 자세한 내용은 공식문서를 참조.
    1. DEVELOPER-APIS [https://developer.riotgames.com/] 
