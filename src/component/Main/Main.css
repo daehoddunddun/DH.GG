@@ -13,12 +13,10 @@
 }
 
 .body-wrap-day {
-  height: 100vh;
   background: rgb(255, 255, 255);
 }
 
 .body-wrap-night {
-  height: 100vh;
   background: rgba(176, 176, 176, 0.786);
 }
 
@@ -87,16 +85,24 @@
   width: 90%;
   height: 30px;
   margin-right: 0.1px;
+  padding-left: 5px;
   border: 1px solid rgba(0, 0, 0, 0.505);
+  border-radius: 5px;
+}
+
+.contents-search-box input:focus {
+  outline: none;
 }
 
 .contents-search-box button {
   width: 50px;
   height: 30.2px;
   font-weight: 500;
+  margin-left: -5px;
   border: 1px solid rgba(0, 0, 0, 0.505);
+  border-radius: 5px;
   color: rgb(0, 0, 0);
-  background: rgb(165, 165, 182);
+  background: rgb(209, 209, 222);
 }
 
 /* contents-user */
@@ -131,4 +137,68 @@
 
 .user-level {
   font-size: 18px;
+  font-weight: 100;
+}
+
+.user-tier-box {
+  display: flex;
+}
+
+.user-rank {
+  margin-left: 2px;
+}
+
+/* History */
+
+.history-item-box {
+  width: 800px;
+  height: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.history-contents {
+  display: flex;
+  height: 170px;
+}
+
+.history-user-box {
+  background: rgb(187, 172, 172);
+  width: 250px;
+}
+
+.history-user-kda {
+  background: rgb(147, 200, 145);
+  width: 200px;
+}
+
+.history-user-other {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: rgb(139, 228, 229);
+  width: 350px;
+}
+
+.user-other-list {
+  width: 170px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.user-other-img {
+  width: 30px;
+  height: 30px;
+  background: rgb(0, 0, 0);
+  margin-right: 5px;
+}
+
+.user-other-item {
+  font-weight: 500;
 }

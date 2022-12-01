@@ -1,23 +1,39 @@
 import React from "react";
 
-function History() {
-  const test = () => {
-    fetch(
-      `https://asia.api.riotgames.com/lol/match/v5/matches/KR_6237262157?api_key=RGAPI-7f369172-3948-4754-a98e-21cf6e1e7c25`,
-      {
-        method: "GET",
-        headers: {
-          Accept: "*/*",
-        },
-      }
-    ).then((result) => {
-      console.log(result);
-    });
-  };
-
+function History(gameList: any) {
   return (
     <div>
-      <h1 onClick={test}>눌러줘</h1>
+      {gameList.gameList.length > 0 &&
+        gameList.gameList.map((item: any) => {
+          return (
+            <div className="history-item-box">
+              <p className="-history-id">
+                Game-ID : {item.info.gameEndTimestamp}
+              </p>
+              <div className="history-contents">
+                <div
+                  className="history-user-box"
+                  onClick={() => {
+                    console.log("게임리스트", gameList.gameList);
+                  }}
+                >
+                  ss
+                </div>
+                <div className="history-user-kda">ss</div>
+                <div className="history-user-other">
+                  {item.info.participants.map((list: any) => {
+                    return (
+                      <div className="user-other-list">
+                        <p className="user-other-img"></p>
+                        <p className="user-other-item">{list.summonerName}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          );
+        })}
     </div>
   );
 }
