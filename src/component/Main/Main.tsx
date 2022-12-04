@@ -1,25 +1,38 @@
+import { type } from "@testing-library/user-event/dist/type";
 import React, { useEffect } from "react";
 import { BsFillSunFill } from "react-icons/bs";
-import { typeShift, typeInputEvent } from "../../common/type";
+import { typeShift, typeInputEvent, userInfoType } from "../../common/type";
 import DropMenu from "./DropMenu";
 import History from "./History";
 import "./Main.css";
 
 function Main() {
   const apiUrl: string = "https://kr.api.riotgames.com";
-  const apiKey: string = "RGAPI-9a26cabc-aa7f-4255-ba55-cf2641f31d0e";
+  const apiKey: string = "RGAPI-8f488cb9-ef53-4034-943c-69319d40a440";
   const gameCondition: string = "ids?type=normal&start=0&count=10";
 
   const [nickName, setNickName] = React.useState<string>("");
-  const [userInfo, setUserInfo] = React.useState<any>({});
+  const [userInfo, setUserInfo] = React.useState<userInfoType>({
+    accountId: "",
+    id: "",
+    name: "",
+    profileIconId: 0,
+    puuid: "",
+    summonerLevel: 0,
+  });
   const [userIcon, setUserIcon] = React.useState<string>("");
   const [userTier, setUserTier] = React.useState<any>([]);
   const [gameList, setGameList] = React.useState<any>([]);
   const [champImg, setChampImg] = React.useState<any>([]);
-  const [shift, setShift] = React.useState<typeShift>({
+  const [shift, setShift] = React.useState<{ [key: string]: string }>({
     body: "body-wrap-day",
     btn: "Day-shift-btn",
   });
+
+  useEffect(() => {
+    console.log("타입변경", userInfo);
+    console.log("");
+  }, [userInfo]);
 
   const isShift = () => {
     shift.btn === "Day-shift-btn"
