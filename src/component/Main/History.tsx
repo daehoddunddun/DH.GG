@@ -24,7 +24,11 @@ function History(gameList: any) {
                   {item.info.participants.map((list: any) => {
                     return (
                       <div className="user-other-list">
-                        <p className="user-other-img"></p>
+                        <img
+                          src={`./champion/${list.championName}.png`}
+                          className="user-other-img"
+                          alt="champion"
+                        />
                         <p className="user-other-item">{list.summonerName}</p>
                       </div>
                     );

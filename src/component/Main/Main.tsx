@@ -8,7 +8,7 @@ import "./Main.css";
 
 function Main() {
   const apiUrl: string = "https://kr.api.riotgames.com";
-  const apiKey: string = "RGAPI-8f488cb9-ef53-4034-943c-69319d40a440";
+  const apiKey: string = "RGAPI-32bca60b-336d-4196-99b1-adc7cb0a54d7";
   const gameCondition: string = "ids?type=normal&start=0&count=10";
 
   const [nickName, setNickName] = React.useState<string>("");
