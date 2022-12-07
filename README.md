@@ -12,35 +12,34 @@
 
 1. React + TypeScript 프로젝트 생성 및 개발환경 세팅(11/23 ~ )
 
-   - vscode 설치 및 git-hub 연동 (11/23)
-   - eslint prettier 적용 (11/23)
-   - CRA를 통한 React 설치 (11/23)
-   - React-Router 및 TypeSrcipt 적용 (11/23)
-   - 주간모드/야간모드 기능추가 (11/25)
-   - type 모듈 지정 호출 (11/30)
+- vscode 설치 및 git-hub 연동 (11/23)
+- eslint prettier 적용 (11/23)
+- CRA를 통한 React 설치 (11/23)
+- React-Router 및 TypeSrcipt 적용 (11/23)
+- 주간모드/야간모드 기능추가 (11/25)
+- type 모듈 지정 호출 (11/30)
 
-   ![reactintroduction](https://user-images.githubusercontent.com/98578138/203504109-96c10c69-3126-46a8-998f-345b3751ae43.png)
-   ![image](https://user-images.githubusercontent.com/98578138/203504124-65805979-0dd0-40a5-8a58-1757801bbdb6.png)
+![reactintroduction](https://user-images.githubusercontent.com/98578138/203504109-96c10c69-3126-46a8-998f-345b3751ae43.png)
+![image](https://user-images.githubusercontent.com/98578138/203504124-65805979-0dd0-40a5-8a58-1757801bbdb6.png)
 
 2. Riot Games open api를 활용한 전적검색 구현 (11/28 ~ )
 
-   ![22](https://user-images.githubusercontent.com/98578138/204750582-e067ca77-4e3a-487f-a232-b9b3e98c0c4a.png)
+![22](https://user-images.githubusercontent.com/98578138/204750582-e067ca77-4e3a-487f-a232-b9b3e98c0c4a.png)
 
-   - Riot Games 공식 api 사용 key 발급 신청 (11/28)
-   - favicon 추가 및 스타일 리팩토링 작업 진행 (11/30)
-   - 추가 레이아웃 작업은 나중에 진행 예정
+- Riot Games 공식 api 사용 key 발급 신청 (11/28)
+- favicon 추가 및 스타일 리팩토링 작업 진행 (11/30)
+- 유저 닉네임 키워드로 검색 데이터 호출(11/29)
+- 호출한 데이터로 해당 유저의 소환사 아이콘, 랭크 티어 호출(11/29)
+- 추가 레이아웃 작업은 나중에 진행 예정
 
-   ![2](https://user-images.githubusercontent.com/98578138/204480433-cf1267ff-ed14-48f4-9cc9-547b69268cc3.png)
 
-   - 실제 내 아이디와 faker 선수 아이디를 검색했을 때 나오는 결과값 표출 (11/29)
+![132321132312](https://user-images.githubusercontent.com/98578138/206190581-f4e2b257-bfb8-4d3c-8ef4-407eec8b5ce0.png)
 
-![23213](https://user-images.githubusercontent.com/98578138/205009183-b37b4a8f-c953-452d-ace0-820b53cbbb73.png)
 
-![123321213](https://user-images.githubusercontent.com/98578138/205815197-7a71d5ac-d6d9-496d-82a6-f65ec5de8228.png)
-
-- 최근 10게임 전적 데이터 호출(12/01)
-- 게임 리스트 id값을 참조하여 게임별 전적 및 참여 유저리스트 표출(12/01)
-- 유저별 플레이 챔피언 아이콘 표출(12/06)
+- 최근 10게임 전적 api 호출(12/01)
+- 게임 리스트 id값을 참조하여 게임별 전적 및 플레이 유저 닉네임 표출(12/01)
+- 유저별 플레이 챔피언 아이콘 이미지 파싱(12/06)
+- 전체 리스트 데이터 안에서 find 메서드를 통해 검색 유저의 플레이 챔피언, KDA 데이터 표출(12/07)
 
 ![5](https://user-images.githubusercontent.com/98578138/204481292-06e36563-82a2-4861-9790-a9ad60642dac.png)
 
