@@ -1,25 +1,29 @@
 import React from "react";
 
-function History(gameList: any) {
+function History(props: any) {
   return (
     <div>
-      {gameList.gameList.length > 0 &&
-        gameList.gameList.map((item: any) => {
+      {props.gameList.length > 0 &&
+        props.gameList.map((item: any) => {
+          let list = item.info.participants.find(
+            (value: any) => value.summonerName === props.userName
+          );
           return (
             <div className="history-item-box">
               <p className="-history-id">
                 Game-ID : {item.info.gameEndTimestamp}
               </p>
               <div className="history-contents">
-                <div
-                  className="history-user-box"
-                  onClick={() => {
-                    console.log("게임리스트", gameList.gameList);
-                  }}
-                >
-                  ss
+                <div className="history-user-box">
+                  <img
+                    src={`./champion/${list.championName}.png`}
+                    className="history-user-img"
+                    alt="champion"
+                  />
                 </div>
-                <div className="history-user-kda">ss</div>
+                <div className="history-user-kda">
+                  {list.kills} / {list.deaths} / {list.assists}
+                </div>
                 <div className="history-user-other">
                   {item.info.participants.map((list: any) => {
                     return (

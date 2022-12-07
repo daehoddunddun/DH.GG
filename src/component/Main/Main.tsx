@@ -1,14 +1,13 @@
-import { type } from "@testing-library/user-event/dist/type";
 import React, { useEffect } from "react";
 import { BsFillSunFill } from "react-icons/bs";
-import { typeShift, typeInputEvent, userInfoType } from "../../common/type";
+import { typeInputEvent, userInfoType } from "../../common/type";
 import DropMenu from "./DropMenu";
 import History from "./History";
 import "./Main.css";
 
 function Main() {
   const apiUrl: string = "https://kr.api.riotgames.com";
-  const apiKey: string = "RGAPI-32bca60b-336d-4196-99b1-adc7cb0a54d7";
+  const apiKey: string = "RGAPI-805e9765-c341-491b-9a9c-42faaec7ee34";
   const gameCondition: string = "ids?type=normal&start=0&count=10";
 
   const [nickName, setNickName] = React.useState<string>("");
@@ -29,11 +28,6 @@ function Main() {
     btn: "Day-shift-btn",
   });
 
-  useEffect(() => {
-    console.log("타입변경", userInfo);
-    console.log("");
-  }, [userInfo]);
-
   const isShift = () => {
     shift.btn === "Day-shift-btn"
       ? setShift({
@@ -50,22 +44,7 @@ function Main() {
 
   const inputNickName = (event: typeInputEvent) => {
     setNickName(event.currentTarget.value);
-    console.log(nickName);
   };
-
-  // useEffect(() => {
-  //   result.info.participants.forEach((item: any) => {
-  //     fetch(
-  //       `https://ddragon.leagueoflegends.com/cdn/12.22.1/img/champion/${item.championName}.png`,
-  //       {
-  //         method: "GET",
-  //         headers: {
-  //           Accept: "*/*",
-  //         },
-  //       }
-  //     ).then((response) => setChampImg(response));
-  //   });
-  // }, [gameList]);
 
   const onSearch = () => {
     gameList.length > 9 && setGameList("");
@@ -184,7 +163,7 @@ function Main() {
                 )}
               </div>
             </div>
-            <History gameList={gameList}></History>
+            <History gameList={gameList} userName={userInfo.name}></History>
           </>
         ) : (
           <></>
