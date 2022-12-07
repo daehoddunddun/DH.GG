@@ -4,7 +4,7 @@
 
 🐶 목적 : React 와 TypeScript 친해지기!
 
-🐶 구현기능: Riot 전적검색 사이트
+🐶 구현기능: Riot_LOL 전적검색 사이트
 
 🐶 적용기술 : <img src="https://img.shields.io/badge/React-aqua?style=flat&logo=react&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/HTML-orange?style=flat&logo=HTML5&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/CSS-blue?style=flat&logo=CSS3&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/TypeScript-gray?style=flat&logo=TypeScript&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/BootStrap-purple?style=flat&logo=BootStrap&logoColor=white&magin-left=5px"/>
 
@@ -19,8 +19,8 @@
 - 주간모드/야간모드 기능추가 (11/25)
 - type 모듈 지정 호출 (11/30)
 
-![reactintroduction](https://user-images.githubusercontent.com/98578138/203504109-96c10c69-3126-46a8-998f-345b3751ae43.png)
-![image](https://user-images.githubusercontent.com/98578138/203504124-65805979-0dd0-40a5-8a58-1757801bbdb6.png)
+![123321123321132](https://user-images.githubusercontent.com/98578138/206192920-dfcf38c7-bc06-4763-a3f5-07096c9ae952.png)
+
 
 2. Riot Games open api를 활용한 전적검색 구현 (11/28 ~ )
 
