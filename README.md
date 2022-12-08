@@ -35,11 +35,13 @@
 
 ![132321132312](https://user-images.githubusercontent.com/98578138/206190581-f4e2b257-bfb8-4d3c-8ef4-407eec8b5ce0.png)
 
+![213123212](https://user-images.githubusercontent.com/98578138/206446216-ec93dd5f-3581-4fa6-8bc3-cc21e55dac86.png)
 
 - 최근 10게임 전적 api 호출(12/01)
 - 게임 리스트 id값을 참조하여 게임별 전적 및 플레이 유저 닉네임 표출(12/01)
 - 유저별 플레이 챔피언 아이콘 이미지 파싱(12/06)
 - 전체 리스트 데이터 안에서 find 메서드를 통해 검색 유저의 플레이 챔피언, KDA 데이터 표출(12/07)
+- 아이템 리스트(이미지 포함) 출력, 승리/패배에 따른 레이아웃 구분, KDA 평점 부분 업데이트(12/08)
 
 ![5](https://user-images.githubusercontent.com/98578138/204481292-06e36563-82a2-4861-9790-a9ad60642dac.png)
 
