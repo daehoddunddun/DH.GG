@@ -149,14 +149,21 @@
 }
 
 /* History */
+#wins-team {
+  background: rgb(236, 242, 255);
+  border-left: 4px solid rgb(98, 104, 211);
+}
+
+#lose-team {
+  background: rgb(255, 241, 243);
+  border-left: 4px solid rgb(237, 64, 64);
+}
 
 .history-item-box {
   width: 800px;
-  height: 200px;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 5px;
-  border: 1px solid black;
   border-radius: 5px;
 }
 
@@ -169,7 +176,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(127, 226, 220);
   width: 250px;
 }
 
@@ -179,13 +185,42 @@
   border-radius: 50px;
 }
 
-.history-user-kda {
+.history-user-info {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  background: rgb(127, 226, 220);
   width: 200px;
+}
+
+.history-user-kda {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.history-user-kda > span {
+  font-weight: 700;
+  font-size: 20px;
+  color: rgb(237, 64, 64);
+}
+
+.history-count-kda {
+  margin-top: 3px;
+  font-size: 16px;
+  color: rgb(104, 100, 100);
+}
+
+.history-uesr-item {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.history-uesr-item > img {
+  width: 30px;
+  height: 30px;
+  margin-left: 2px;
 }
 
 .history-user-other {
@@ -193,26 +228,27 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background: rgb(139, 228, 229);
-  width: 350px;
+  width: 450px;
+  margin-top: -15px;
 }
 
 .user-other-list {
-  width: 170px;
+  width: 190px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 45px;
 }
 
 .user-other-img {
   width: 30px;
   height: 30px;
-  background: rgb(0, 0, 0);
   margin-right: 5px;
   color: white;
 }
 
 .user-other-item {
   font-weight: 500;
+  letter-spacing: -1px;
+  font-size: 14px;
 }

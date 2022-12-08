@@ -8,8 +8,13 @@ function History(props: any) {
           let list = item.info.participants.find(
             (value: any) => value.summonerName === props.userName
           );
+
           return (
-            <div className="history-item-box">
+            <div
+              className="history-item-box"
+              id={list.win ? "wins-team" : "lose-team"}
+              key={item.info.gameEndTimestamp}
+            >
               <p className="-history-id">
                 Game-ID : {item.info.gameEndTimestamp}
               </p>
@@ -21,8 +26,22 @@ function History(props: any) {
                     alt="champion"
                   />
                 </div>
-                <div className="history-user-kda">
-                  {list.kills} / {list.deaths} / {list.assists}
+                <div className="history-user-info">
+                  <p className="history-user-kda">
+                    {list.kills} / <span>{list.deaths}</span> / {list.assists}
+                  </p>
+                  <p className="history-count-kda">
+                    {((list.kills + list.assists) / list.deaths).toFixed(2)}
+                    :1
+                  </p>
+                  <div className="history-uesr-item">
+                    <img src={`./item/${list.item0}.png`} alt="item" />
+                    <img src={`./item/${list.item1}.png`} alt="item" />
+                    <img src={`./item/${list.item2}.png`} alt="item" />
+                    <img src={`./item/${list.item3}.png`} alt="item" />
+                    <img src={`./item/${list.item4}.png`} alt="item" />
+                    <img src={`./item/${list.item5}.png`} alt="item" />
+                  </div>
                 </div>
                 <div className="history-user-other">
                   {item.info.participants.map((list: any) => {
