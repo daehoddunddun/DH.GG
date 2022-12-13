@@ -1,4 +1,4 @@
-# api를 활용한 Riot 전적검색, React+TypeScript 공부용 개인 프로젝트
+# Riot api를 활용한 LOL 전적검색 사이트 제작
 
 🐶 기간 : 2022. 11. 23 ~
 
