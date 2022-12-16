@@ -1,16 +1,22 @@
-import { type } from "os";
+/* enum */
+export enum UserInfoEarly {
+  accountId = "",
+  id = "",
+  name = "",
+  profileIconId = 0,
+  puuid = "",
+  summonerLevel = 0,
+}
 
-/* Array */
-export type numArr = number[]; //숫자형 배열
-export type strArr = string[]; //문자열 배열
-export type isArr = boolean[]; //boolean형 배열
-export type tupleArr = (string | number)[]; //배열 안의 이중 타입 배열
+export enum shiftEarly {
+  body = "body-wrap-day",
+  btn = "Day-shift-btn",
+}
 
-/* Object */
-export type typeShift = { body: string; btn: string };
-// 객체 안에 {[key : type] : vlaue_type} 지정하는 방식
+/* type */
+export type Shift = { body: string; btn: string };
 
-export type userInfoType = {
+export type UserInfo = {
   accountId: string;
   id: string;
   name: string;
@@ -18,7 +24,32 @@ export type userInfoType = {
   puuid: string;
   revisionDate?: number;
   summonerLevel: number;
-}; // 객체 안에 { key : value } 로 할당하는 타입 지정 방식
+};
 
-/* Event */
+export type UserTier = {
+  freshBlood?: boolean;
+  hotStreak?: boolean;
+  inactive?: boolean;
+  leagueId: string;
+  leaguePoints: number;
+  losses?: number;
+  queueType?: string;
+  rank: string;
+  summonerId: string;
+  summonerName: string;
+  tier: string;
+  veteran?: boolean;
+  wins: number;
+};
+
+export type GameList = {
+  metadata: any;
+  info: any;
+};
+
+export type PropsGameList = { gameList: any; userName: string };
+
+/* event */
 export type typeInputEvent = React.FormEvent<HTMLInputElement>;
+
+/* function */

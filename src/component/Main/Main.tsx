@@ -1,34 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+import {
+  apiKey,
+  apiUrl,
+  gameCondition,
+  ImgApiUrl,
+  matchApiUrl,
+} from "../../common/apiKey";
+import { getSearchHeader, getDefault } from "../../api/header";
+import {
+  typeInputEvent,
+  UserInfo,
+  UserInfoEarly,
+  UserTier,
+  shiftEarly,
+  Shift,
+  GameList,
+} from "../../common/type";
 import { BsFillSunFill } from "react-icons/bs";
-import { typeInputEvent, userInfoType } from "../../common/type";
 import DropMenu from "./DropMenu";
 import History from "./History";
 import "./Main.css";
 
-function Main() {
-  const apiUrl: string = "https://kr.api.riotgames.com";
-  const apiKey: string = "RGAPI-a4e67f5f-8211-47cc-ab6f-7f5f3ad35a30";
-  const gameCondition: string = "ids?type=normal&start=0&count=10";
-
+function Main(): React.ReactElement {
+  // ! tag state
+  const [shift, setShift] = React.useState<Shift>(shiftEarly);
   const [nickName, setNickName] = React.useState<string>("");
-  const [userInfo, setUserInfo] = React.useState<userInfoType>({
-    accountId: "",
-    id: "",
-    name: "",
-    profileIconId: 0,
-    puuid: "",
-    summonerLevel: 0,
-  });
-  const [userIcon, setUserIcon] = React.useState<string>("");
-  const [userTier, setUserTier] = React.useState<any>([]);
-  const [gameList, setGameList] = React.useState<any>([]);
-  const [champImg, setChampImg] = React.useState<any>([]);
-  const [shift, setShift] = React.useState<{ [key: string]: string }>({
-    body: "body-wrap-day",
-    btn: "Day-shift-btn",
-  });
+  // 적용 대기 - const [loding, setLoding] = React.useState<any>(null);
 
-  const isShift = () => {
+  // ! userInfo state
+  const [userIcon, setUserIcon] = React.useState<string>("");
+  const [userInfo, setUserInfo] = React.useState<UserInfo>(UserInfoEarly);
+  const [userTier, setUserTier] = React.useState<UserTier[]>([]);
+
+  // ! gameList state
+  const [gameList, setGameList] = React.useState<GameList[]>([]);
+
+  const handleChangeShift = () => {
     shift.btn === "Day-shift-btn"
       ? setShift({
           ...shift,
@@ -47,46 +54,25 @@ function Main() {
   };
 
   const onSearch = () => {
-    gameList.length > 9 && setGameList("");
+    gameList.length > 9 && setGameList([]);
     fetch(
       `${apiUrl}/lol/summoner/v4/summoners/by-name/${nickName}?api_key=${apiKey}`,
-      {
-        method: "GET",
-        headers: {
-          "User-Agent":
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36",
-          "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
-          "Accept-Charset": "application/x-www-form-urlencoded; charset=UTF-8",
-          Origin: "https://developer.riotgames.com",
-          Authorization: "",
-        },
-      }
+      getSearchHeader
     )
       .then((response) => response.json())
       .then((result) => {
         setUserInfo(result);
-        console.log(result);
 
         fetch(
-          `http://ddragon.leagueoflegends.com/cdn/12.22.1/img/profileicon/${result.profileIconId}.png`,
-          {
-            method: "GET",
-            headers: {
-              Accept: "*/*",
-            },
-          }
+          `${ImgApiUrl}/cdn/12.22.1/img/profileicon/${result.profileIconId}.png`,
+          getDefault
         ).then((result) => {
           setUserIcon(result.url);
         });
 
         fetch(
           `${apiUrl}/lol/league/v4/entries/by-summoner/${result.id}?api_key=${apiKey}`,
-          {
-            method: "GET",
-            headers: {
-              Accept: "*/*",
-            },
-          }
+          getDefault
         )
           .then((response) => response.json())
           .then((result) => {
@@ -94,30 +80,19 @@ function Main() {
           });
 
         fetch(
-          `https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${result.puuid}/${gameCondition}&api_key=${apiKey}`,
-          {
-            method: "GET",
-            headers: {
-              Accept: "*/*",
-            },
-          }
+          `${matchApiUrl}/lol/match/v5/matches/by-puuid/${result.puuid}/${gameCondition}&api_key=${apiKey}`,
+          getDefault
         )
           .then((response) => response.json())
           .then((result) => {
-            console.log("최근전적 code", result);
-            result.forEach((item: any, i: number) => {
+            result.forEach((item: string) => {
               fetch(
-                `https://asia.api.riotgames.com/lol/match/v5/matches/${item}?api_key=${apiKey}`,
-                {
-                  method: "GET",
-                  headers: {
-                    Accept: "*/*",
-                  },
-                }
+                `${matchApiUrl}/lol/match/v5/matches/${item}?api_key=${apiKey}`,
+                getDefault
               )
                 .then((response) => response.json())
                 .then((result) => {
-                  setGameList((gameList: any) => [...gameList, result]);
+                  setGameList((gameList: GameList[]) => [...gameList, result]);
                 });
             });
           });
@@ -127,14 +102,14 @@ function Main() {
   return (
     <div className={shift.body}>
       <div className="nav-wrap">
-        <img className="nav-title" src="./logo_2.png" alt="로고" />
+        <img className="nav-title" src="./logo_2.png" alt="상단 로고" />
         <div className="nav-menu-box">
-          <BsFillSunFill className={shift.btn} onClick={isShift} />
+          <BsFillSunFill className={shift.btn} onClick={handleChangeShift} />
           <DropMenu />
         </div>
       </div>
       <div className="contents-wrap">
-        <img src="logo_3.png" className="contents-logo" alt="로고" />
+        <img src="logo_3.png" className="contents-logo" alt="메인 로고" />
         <div className="contents-search-box">
           <input
             type="text"

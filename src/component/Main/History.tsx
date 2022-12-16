@@ -1,10 +1,11 @@
 import React from "react";
+import { PropsGameList, GameList } from "../../common/type";
 
-function History(props: any) {
+function History(props: PropsGameList): React.ReactElement {
   return (
     <div>
       {props.gameList.length > 0 &&
-        props.gameList.map((item: any) => {
+        props.gameList.map((item: GameList) => {
           let list = item.info.participants.find(
             (value: any) => value.summonerName === props.userName
           );
