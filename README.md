@@ -17,7 +17,7 @@
 - CRA를 통한 React 설치 (11/23)
 - React-Router 및 TypeSrcipt 적용 (11/23)
 - 주간모드/야간모드 기능추가 (11/25)
-- type 모듈 지정 호출 (11/30)
+- type 모듈 지정 호출 (11/30, 12/16)
 
 ![123321123321132](https://user-images.githubusercontent.com/98578138/206192920-dfcf38c7-bc06-4763-a3f5-07096c9ae952.png)
 
