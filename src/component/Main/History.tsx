@@ -1,7 +1,13 @@
 import React from "react";
+import ItemModal from "../Modal/ItemModal";
 import { PropsGameList, GameList } from "../../common/type";
 
 function History(props: PropsGameList): React.ReactElement {
+  const test = (event: any) => {
+    props.setHoverLocation({ x: event.pageX, y: event.pageY });
+    console.log(props.hoverLcation);
+  };
+
   return (
     <div>
       {props.gameList.length > 0 &&
@@ -9,7 +15,6 @@ function History(props: PropsGameList): React.ReactElement {
           let list = item.info.participants.find(
             (value: any) => value.summonerName === props.userName
           );
-
           return (
             <div
               className="history-item-box"
@@ -36,12 +41,36 @@ function History(props: PropsGameList): React.ReactElement {
                     :1
                   </p>
                   <div className="history-uesr-item">
-                    <img src={`./item/${list.item0}.png`} alt="item" />
-                    <img src={`./item/${list.item1}.png`} alt="item" />
-                    <img src={`./item/${list.item2}.png`} alt="item" />
-                    <img src={`./item/${list.item3}.png`} alt="item" />
-                    <img src={`./item/${list.item4}.png`} alt="item" />
-                    <img src={`./item/${list.item5}.png`} alt="item" />
+                    <img
+                      src={`./item/${list.item0}.png`}
+                      alt="item"
+                      onMouseOver={test}
+                    />
+                    <img
+                      src={`./item/${list.item1}.png`}
+                      alt="item"
+                      onMouseOver={test}
+                    />
+                    <img
+                      src={`./item/${list.item2}.png`}
+                      alt="item"
+                      onMouseOver={test}
+                    />
+                    <img
+                      src={`./item/${list.item3}.png`}
+                      alt="item"
+                      onMouseOver={test}
+                    />
+                    <img
+                      src={`./item/${list.item4}.png`}
+                      alt="item"
+                      onMouseOver={test}
+                    />
+                    <img
+                      src={`./item/${list.item5}.png`}
+                      alt="item"
+                      onMouseOver={test}
+                    />
                   </div>
                 </div>
                 <div className="history-user-other">

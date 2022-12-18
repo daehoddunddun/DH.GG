@@ -1,6 +1,6 @@
 /* kr-Riot, Main  */
 export const apiUrl: string = "https://kr.api.riotgames.com";
-export const apiKey: string = "RGAPI-9b9fc7c8-f957-4609-96d5-0a2186e3374a";
+export const apiKey: string = "RGAPI-c05c820a-cade-48a7-8477-2ba0d78481ba";
 export const gameCondition: string = "ids?type=normal&start=0&count=10";
 
 /* ddeagon, sub-1 */

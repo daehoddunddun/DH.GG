@@ -47,7 +47,12 @@ export type GameList = {
   info: any;
 };
 
-export type PropsGameList = { gameList: any; userName: string };
+export type PropsGameList = {
+  gameList: any;
+  userName: string;
+  hoverLcation: number | undefined;
+  setHoverLocation: Function;
+};
 
 /* event */
 export type typeInputEvent = React.FormEvent<HTMLInputElement>;

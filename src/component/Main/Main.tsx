@@ -25,6 +25,7 @@ function Main(): React.ReactElement {
   // ! tag state
   const [shift, setShift] = React.useState<Shift>(shiftEarly);
   const [nickName, setNickName] = React.useState<string>("");
+  const [hoverLcation, setHoverLocation] = React.useState();
   // 적용 대기 - const [loding, setLoding] = React.useState<any>(null);
 
   // ! userInfo state
@@ -138,7 +139,12 @@ function Main(): React.ReactElement {
                 )}
               </div>
             </div>
-            <History gameList={gameList} userName={userInfo.name}></History>
+            <History
+              gameList={gameList}
+              userName={userInfo.name}
+              hoverLcation={hoverLcation}
+              setHoverLocation={setHoverLocation}
+            ></History>
           </>
         ) : (
           <></>
