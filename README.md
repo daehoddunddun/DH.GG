@@ -9,6 +9,7 @@
 🐶 적용기술 : <img src="https://img.shields.io/badge/React-aqua?style=flat&logo=react&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/HTML-orange?style=flat&logo=HTML5&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/CSS-blue?style=flat&logo=CSS3&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/TypeScript-gray?style=flat&logo=TypeScript&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/BootStrap-purple?style=flat&logo=BootStrap&logoColor=white&magin-left=5px"/>
 
 🐶 aws 배포 링크 : http://dh-project.s3-website.ap-northeast-2.amazonaws.com/ 
+
 (key 만료기간이 있어서 라이엇 개발자 신청을 해야하는데 아직 승인이 안 나서 2일마다 갱신 필요)
 
 ---
@@ -21,6 +22,7 @@
 - React-Router 및 TypeSrcipt 적용 (11/23)
 - 주간모드/야간모드 기능추가 (11/25)
 - type 모듈 지정 호출 (11/30, 12/16)
+- aws s3 배포 완료 (23/01/10)
 
 ![123321123321132](https://user-images.githubusercontent.com/98578138/206192920-dfcf38c7-bc06-4763-a3f5-07096c9ae952.png)
 
