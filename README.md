@@ -8,6 +8,9 @@
 
 🐶 적용기술 : <img src="https://img.shields.io/badge/React-aqua?style=flat&logo=react&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/HTML-orange?style=flat&logo=HTML5&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/CSS-blue?style=flat&logo=CSS3&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/TypeScript-gray?style=flat&logo=TypeScript&logoColor=white&magin-left=5px"/> <img src="https://img.shields.io/badge/BootStrap-purple?style=flat&logo=BootStrap&logoColor=white&magin-left=5px"/>
 
+🐶 aws 배포 링크 : http://dh-project.s3-website.ap-northeast-2.amazonaws.com/ 
+(key 만료기간이 있어서 라이엇 개발자 신청을 해야하는데 아직 승인이 안 나서 2일마다 갱신 필요)
+
 ---
 
 1. React + TypeScript 프로젝트 생성 및 개발환경 세팅(11/23 ~ )
